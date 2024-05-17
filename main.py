@@ -1,13 +1,15 @@
 import argparse
 
 
-def parsearguments():
-    parser = argparse.ArgumentParser(description='File Converter')
-    parser.addargument('inputfile', help='Input file path')
-    parser.addargument('output_file', help='Output file path')
-    return parser.parse_args()
+def main():
+    parser = argparse.ArgumentParser(description="Data File Handler")
+    parser.add_argument("input_files", nargs=2, help="Input files and formats")
+    args = parser.parse_args()
 
-if __name == '__main':
-    args = parse_arguments()
-    print(f'Input file: {args.input_file}')
-    print(f'Output file: {args.output_file}')
+    input_files = args.input_files
+
+
+
+
+if __name__ == "__main__":
+    main()
